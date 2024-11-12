@@ -17,17 +17,29 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    position: fixed;
 }
 
 .header__logo {
     width: 100px;
     height: auto;
+    transition: width 0.3s ease;
 }
 
-.header__title {
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+@media screen and (max-width: 768px) {
+    .header__logo {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__logo {
+        width: 50px;
+    }
+}
+
+.header__nav {
+    margin-top: 60px;
 }
 
 .header__nav-list {
@@ -37,21 +49,23 @@ body {
     gap: 30px;
 }
 
-.header__nav-list li {
-    text-transform: uppercase;
-    text-decoration: underline;
-    display: inline;
-}
-
-.header__nav-list a {
+.header__nav-list a.active {
     color: #0077cc;
     font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #0077cc;
+}
+
+.header__nav-list li a:hover {
+    color: #0055aa;
+    transition: color 0.3s ease;
+    text-decoration: underline;
 }
 
 main {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 80px 20px 20px 20px;
 }
 
 #news, #current-olympiads {
@@ -62,51 +76,67 @@ main {
     margin-right: 20px;
 }
 
-#news {
-    flex: 1;
-}
-
-#current-olympiads {
-    flex: 3;
-}
-
 aside {
+    display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    color: #0077cc;
+.gallery__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-h3 {
-    font-size: 1.2em;
-    color: #333;
+.gallery__row img {
+    flex: 1 1 200px;
+    max-width: 30%;
+    height: auto;
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 10px;
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
 }
-
-pre, code {
-    background-color: #ffffff;
-    padding: 10px;
+.table__row {
+    display: contents;
 }
-
-code {
-    letter-spacing: 5px;
+.table__header {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #333;
+}
+.table__row div:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+.table__row div:nth-child(even) {
+    background-color: #d0d0d0;
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #333333;
     color: #ffffff;
     text-align: center;
     padding: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    footer {
+        display: none;
+    }
+    .gallery__row img {
+        width: 100%;
+    }
+}

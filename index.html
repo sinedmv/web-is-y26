@@ -6,15 +6,17 @@
   <meta name="keywords" content="олимпиады, школьники, соревнования, новости, образование, якутия">
   <title>Олимпиады в Якутии</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
 
 <header class="header">
   <nav class="header__nav">
     <ul class="header__nav-list">
-      <li><a href="#news">Новости</a></li>
-      <li><a href="#current-olympiads">Текущие олимпиады</a></li>
-      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="index.html">Главное</a></li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="olympiads.html">Текущие олимпиады</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
     </ul>
   </nav>
   <div class="header__content">
@@ -31,18 +33,6 @@
       <li>Олимпиада по биологии - регистрация до 1 ноября</li>
       <li>Олимпиада по химии - регистрация до 20 ноября</li>
     </ul>
-
-    <pre>
-        **********************
-        *    ОЛИМПИАДЫ 2024   *
-        *     Для школьников  *
-        **********************
-        |  Информатика  | 15 окт  |
-        |  Биология     | 1 ноя   |
-        |  Химия        | 20 ноя  |
-        **********************
-    </pre>
-
   </section>
 
   <section id="news">
@@ -56,19 +46,47 @@
       <p>Объявлены результаты всероссийской олимпиады по физике. Поздравляем победителей!</p>
     </article>
   </section>
-</main>
 
-<aside>
-  <h3>Важно знать и всегда помнить</h3>
-  <p><strong>Победа в олимпиадах</strong> - это возможность поступить в лучшие вузы страны без вступительных испытаний.</p>
-  <p><em><strong>Scientia vinces</strong></em></p>
-</aside>
+  <section class="gallery">
+    <h2>Галерея</h2>
+    <div class="gallery__row">
+      <img src="./Images/Yakutia.png" alt="Пример 1">
+      <img src="./Images/Shaman.png" alt="Пример 2">
+      <img src="./Images/Mongol.png" alt="Пример 3">
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h2>Расписание</h2>
+    <div class="table">
+      <div class="table__row table__header">
+        <div>Предмет</div>
+        <div>Дата</div>
+        <div>Время</div>
+      </div>
+      <div class="table__row">
+        <div>Информатика</div>
+        <div>15 окт</div>
+        <div>10:00</div>
+      </div>
+      <div class="table__row">
+        <div>Биология</div>
+        <div>1 ноя</div>
+        <div>11:30</div>
+      </div>
+      <div class="table__row">
+        <div>Химия</div>
+        <div>20 ноя</div>
+        <div>14:00</div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer id="contacts">
   <h2>Контакты</h2>
   <p>Свяжитесь с нами по почте: <strong>sinedmv@niuitmo.ru</strong></p>
 </footer>
-
 
 </body>
 </html>
