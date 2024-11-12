@@ -122,6 +122,10 @@ aside {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #333333;
     color: #ffffff;
     text-align: center;
