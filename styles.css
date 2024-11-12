@@ -49,6 +49,19 @@ body {
     gap: 30px;
 }
 
+.header__nav-list a.active {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #0077cc;
+}
+
+.header__nav-list li a:hover {
+    color: #0055aa;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
 main {
     display: flex;
     justify-content: space-between;
