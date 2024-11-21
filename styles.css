@@ -13,6 +13,21 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 20px 20px 20px;
+}
+
 .header__content {
     display: flex;
     align-items: center;
@@ -122,10 +137,6 @@ aside {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background-color: #333333;
     color: #ffffff;
     text-align: center;
@@ -183,5 +194,49 @@ footer {
 
 .btn:hover {
     background-color: #0055aa;
+}
+
+/* Preloader */
+.preloader {
+    text-align: center;
+    font-size: 18px;
+    color: #0077cc;
+    margin: 20px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Ошибки */
+.error {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Сообщения */
+.message {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.message h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.message p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
 }
 
