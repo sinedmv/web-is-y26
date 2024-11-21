@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Сообщения пользователей">
+    <meta name="keywords" content="сообщения, форум, jsonplaceholder">
+    <title>Сообщения пользователей - Олимпиады в Якутии</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/messages.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="olympiads.html">Текущие олимпиады</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="constructor.html">Конструктор</a></li>
+            <li><a href="messages.html">Сообщения</a></li>
+        </ul>
+    </nav>
+    <div class="header__content">
+        <img src="./Images/logo.png" alt="Логотип" class="header__logo"/>
+        <h1 class="header__title">Сообщения пользователей</h1>
+    </div>
+</header>
+
+<main>
+    <section id="messages">
+        <h2>Сообщения от пользователей</h2>
+        <div id="preloader" class="preloader">Загрузка...</div>
+        <div id="content" class="content"></div>
+        <div id="error" class="error"></div>
+    </section>
+</main>
+
+<footer id="footer">
+    <p>Контакты и информация</p>
+</footer>
+
+</body>
+</html>
