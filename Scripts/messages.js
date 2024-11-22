@@ -29,10 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((data) => {
 
-            // Generate a random number of messages to display
             const numberOfMessages = Math.floor(Math.random() * data.length) + 1;
 
-            // Shuffle the array and select a random subset
             const shuffledMessages = data.sort(() => 0.5 - Math.random());
             const selectedMessages = shuffledMessages.slice(0, numberOfMessages);
 
@@ -41,6 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((err) => {
             preloader.style.display = "none";
-            error.textContent = `⚠ Что-то пошло не так: ${err.message}`;
+            error.textContent = `Error${err.message}`;
         });
 });

@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Отключаем перезагрузку страницы
+        event.preventDefault();
 
         const olympiadName = document.getElementById("olympiad-name").value;
         const subject = document.getElementById("subject").value;
