@@ -218,7 +218,6 @@ footer {
     background-color: #0055aa;
 }
 
-/* Preloader */
 .preloader {
     text-align: center;
     font-size: 18px;
@@ -232,7 +231,6 @@ footer {
     50% { opacity: 0.5; }
 }
 
-/* Ошибки */
 .error {
     color: red;
     font-size: 16px;
@@ -240,7 +238,6 @@ footer {
     margin: 20px;
 }
 
-/* Сообщения */
 .message {
     border: 1px solid #ddd;
     padding: 15px;
