@@ -22,30 +22,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const addRow = ({ olympiadName, subject, date, status = true }) => {
         const row = document.createElement("tr");
+        row.classList.add("generated-table__row");
 
         const nameCell = document.createElement("td");
         nameCell.textContent = olympiadName;
+        nameCell.classList.add("generated-table__cell");
 
         const subjectCell = document.createElement("td");
         subjectCell.textContent = subject;
+        subjectCell.classList.add("generated-table__cell");
 
         const dateCell = document.createElement("td");
         dateCell.textContent = date;
+        dateCell.classList.add("generated-table__cell");
 
         const statusCell = document.createElement("td");
         statusCell.textContent = status ? "Активная" : "Неактивная";
-        statusCell.classList.add("status", status ? "active" : "");
+        statusCell.classList.add("generated-table__cell", "status");
+        if (status) {
+            statusCell.classList.add("status--active");
+        }
 
         const actionsCell = document.createElement("td");
+        actionsCell.classList.add("generated-table__cell");
 
         const toggleButton = document.createElement("button");
         toggleButton.textContent = status ? "Сделать неактивной" : "Сделать активной";
         toggleButton.classList.add("btn", "toggle-status");
         toggleButton.addEventListener("click", () => {
-            statusCell.textContent = statusCell.textContent === "Активная" ? "Неактивная" : "Активная";
-            statusCell.classList.toggle("active");
-            toggleButton.textContent =
-                statusCell.textContent === "Активная" ? "Сделать неактивной" : "Сделать активной";
+            const isActive = statusCell.textContent === "Активная";
+            statusCell.textContent = isActive ? "Неактивная" : "Активная";
+            statusCell.classList.toggle("status--active", !isActive);
+            toggleButton.textContent = isActive ? "Сделать активной" : "Сделать неактивной";
             saveData();
         });
 

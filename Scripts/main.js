@@ -11,13 +11,16 @@
             console.warn("Footer element not found.");
         }
 
-        const path = document.location.pathname;
+        let path = document.location.pathname.split('/').pop();
+        if (!path) {
+            path = "index.html";
+        }
         const menuLinks = document.querySelectorAll(".header__nav-list a");
 
         menuLinks.forEach(link => {
-            const linkPath = new URL(link.href).pathname;
+            const linkPath = new URL(link.href).pathname.split('/').pop();
             if (linkPath === path) {
-                link.classList.add("active");
+                link.classList.add("header__nav-list__link--active");
             }
         });
     });
